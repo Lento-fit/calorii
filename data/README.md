@@ -7,7 +7,7 @@ Set de date deschis cu alimente și preparate consumate în România: valori nut
 | Fișier | Rol |
 | --- | --- |
 | `alimente-ro.json` | colecția, sursa de adevăr; se editează manual sau prin script, niciodată din CSV |
-| `alimente-ro.csv` | export generat din JSON la build (nu se editează) |
+| `alimente-ro.csv` | export generat din JSON cu `python3 scripts/export-csv.py` (nu se editează manual; se regenerează la fiecare PR care schimbă JSON-ul) |
 | `schema/aliment.schema.json` | schema unei înregistrări (JSON Schema 2020-12) |
 | `translations/<locale>.json` | numele alimentelor în alte limbi decât `ro`/`en`, cheie = `id` |
 | `PROVENIENTA.md` | sursele acceptate, licențele lor și atribuirea cerută |
