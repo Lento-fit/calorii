@@ -2,7 +2,25 @@
 
 Funcții pure, fără dependențe, TypeScript strict, ESM + CJS, tipuri incluse. Nimic nu rotunjește aici; rotunjirea și formatarea (virgulă decimală în română, „≈ 1.590 kcal”) sunt treaba stratului de afișare.
 
-**Stare:** contract definit, implementare în lucru (vezi `docs/TASKS.md`, WP2). Contractul este `test/vectors.json`: constante, reguli și cazuri de test cu valori **nerotunjite**, toleranță 0,001. Portul Python, serverul MCP, site-ul și widget-ul folosesc același fișier. Schimbarea lui = PR separat, etichetat `contract-change`.
+**Stare:** implementat; trece toți vectorii contractului și testele de proprietate, acoperire peste 95%; build ESM + CJS + tipuri. Nepublicat încă pe npm (publicarea se face din CI, la primul tag). Contractul este `test/vectors.json`: constante, reguli și cazuri de test cu valori **nerotunjite**, toleranță 0,001. Portul Python, serverul MCP, site-ul și widget-ul folosesc același fișier. Schimbarea lui = PR separat, etichetat `contract-change`.
+
+## Instalare și utilizare
+
+```bash
+npm install calorii
+```
+
+```ts
+import { bmrMifflinStJeor, tdee, calorieTarget, macros } from 'calorii'
+
+const bmr = bmrMifflinStJeor({ sex: 'female', weightKg: 65, heightCm: 165, ageYears: 30 })
+const maintenance = tdee(bmr, 'moderate')                       // 2123.8875 kcal/day
+const target = calorieTarget({ tdee: maintenance, sex: 'female', weightKg: 65, goal: 'lose', rateKgPerWeek: 0.5 })
+// target.targetKcal = 1592.915625, target.adjustments = ['capped_25pct'], target.feasible = true
+const split = macros({ kcal: target.targetKcal!, weightKg: 65, profile: 'balanced' })
+```
+
+Rezultatele sunt nerotunjite; rotunjirea, intervalul afișat și textele pentru oameni (inclusiv traducerea codurilor din `adjustments`, `warnings` și `reason`) sunt treaba interfeței care folosește motorul. Funcționează în Node 18+ și în browser (fără API-uri specifice).
 
 ## API
 
