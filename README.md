@@ -24,7 +24,7 @@ Ne place să-i spunem **Wikipedia caloriilor**: deschisă la contribuții, verif
 | --- | --- | --- |
 | 🧮 | **Motorul `calorii`** ([npm](packages/calorii/)) | BMR cu trei formule, TDEE, țintă calorică cu praguri de siguranță și deficit recalculat, macronutrienți cu politică de fezabilitate, IMC pe intervale continue, porții. Funcții pure, zero dependențe, contract de teste public. |
 | 🗂️ | **Setul de date `alimente-ro`** ([CC BY 4.0](data/)) | Alimente și preparate românești, valori la 100 g așa cum se consumă, porții uzuale, **sursă și licență pe fiecare înregistrare**. `null` înseamnă „nu știm”, niciodată 0. |
-| 🌐 | **Site-ul** ([`calculator.lento.fit`](https://calculator.lento.fit), în construcție) | Calculatoare interactive cu exemplu, metodă, limite și surse pe aceeași pagină. Română la rădăcină, alte limbi sub prefix. |
+| 🌐 | **Site-ul** (în construcție; adresa se anunță la lansare) | Calculatoare interactive cu exemplu, metodă, limite și surse pe aceeași pagină. Română la rădăcină, alte limbi sub prefix. |
 | 🤖 | **Serverul MCP `calorii-mcp`** | Aceleași calcule și căutarea în date, expuse asistenților AI prin Model Context Protocol. Local întâi, găzduit apoi. |
 | 🧩 | **Widget-ul** | Calculatorul, de lipit pe orice site cu două linii de HTML. Shadow DOM, sub 20 KB, o linie de atribuire vizibilă. |
 | 🐍 | **`calorii` pentru Python** (PyPI) | Același motor, aceiași vectori de test, pentru cine lucrează în Python. |
