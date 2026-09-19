@@ -3,7 +3,7 @@
 Ce măsurăm, cu ce, și ce nu putem ști. Fiecare indicator are sursa, definiția și limita scrise aici înainte să fie raportat.
 
 | Indicator | Sursa | Definiție | Limită |
-|---|---|---|---|
+| --- | --- | --- | --- |
 | Calculator folosit | eveniment anonim pe site (fără cookie, fără valorile introduse) | un calcul finalizat pe o pagină | numără sesiuni de calcul, nu persoane |
 | Click către aplicație | eveniment anonim pe site + parametrul `src` din link | un click pe linkul către aplicație | un click nu e o instalare |
 | Pagini indexate, afișări, poziții | Google Search Console, Bing Webmaster | conform definițiilor lor | date agregate, cu întârziere |

@@ -38,4 +38,4 @@ Contribuind, accepți ca codul tău să fie publicat sub MIT și datele sub CC B
 
 ## Întrebări
 
-Discussions pe GitHub sau hello@lento.fit.
+Discussions pe GitHub sau <hello@lento.fit>.

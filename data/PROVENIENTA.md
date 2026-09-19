@@ -3,7 +3,7 @@
 Surse acceptate pentru `alimente-ro`, licențele lor și atribuirea cerută. O înregistrare fără una dintre aceste surse nu intră în set.
 
 | `sursa.tip` | Sursa | Licență (`sursa.licenta`) | Atribuire cerută | Note |
-|---|---|---|---|---|
+| --- | --- | --- | --- | --- |
 | `usda` | USDA FoodData Central (Foundation Foods, SR Legacy) | `public-domain` | recomandată: „U.S. Department of Agriculture, FoodData Central” | valorile energetice pot folosi factori Atwater specifici; păstrăm valoarea sursei |
 | `ciqual` | ANSES, tabelul CIQUAL (Franța) | `etalab-2.0` (Licence Ouverte 2.0) | obligatorie: „ANSES, Table Ciqual” + data versiunii | compatibilă cu redistribuirea sub CC BY cu atribuire |
 | `cofid` | McCance and Widdowson's, CoFID (UK) | `ogl-3` (Open Government Licence v3) | obligatorie: „Contains public sector information licensed under the Open Government Licence v3.0” | |

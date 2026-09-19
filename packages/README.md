@@ -1,7 +1,7 @@
 # Pachete
 
 | Pachet | Rol | Contract |
-|---|---|---|
+| --- | --- | --- |
 | `calorii/` | motorul de calcul (TypeScript, fără dependențe, funcții pure); publicat pe npm ca `calorii` | `calorii/README.md` (API) + `calorii/test/vectors.json` |
 | `calorii-py/` | portul Python al motorului; publicat pe PyPI ca `calorii` | aceiași vectori, copiați la build |
 | `calorii-mcp/` | server MCP care expune calculele și căutarea în date; local (stdio) întâi, HTTP găzduit ulterior | `calorii-mcp/README.md` (unelte, scheme) |

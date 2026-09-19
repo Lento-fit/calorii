@@ -17,7 +17,7 @@ Registrul limbilor e `config/locales.json` (rădăcina repo-ului). Doar limbile 
 ## Frontmatter (obligatoriu pentru fiecare pagină)
 
 | Câmp | Tip | Note |
-|---|---|---|
+| --- | --- | --- |
 | `pageId` | string | identificator stabil, comun între limbi (`deficit-caloric`) |
 | `slug` | string | slugul local al paginii (fără prefix de limbă) |
 | `title` | string | ≤ 60 caractere |

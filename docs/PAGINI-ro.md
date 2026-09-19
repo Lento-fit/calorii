@@ -3,7 +3,7 @@
 Fiecare pagină răspunde unei întrebări concrete și are o unealtă sau o explicație distinctă. Dacă două pagini ajung să spună același lucru, se unesc. Slugurile în română nu se schimbă după publicare.
 
 | # | URL | Întrebarea la care răspunde | Unealta de pe pagină |
-|---|---|---|---|
+| --- | --- | --- | --- |
 | 1 | `/` | Câte calorii am nevoie pe zi și cum le împart? | calculatorul complet: BMR → TDEE → țintă (menținere / slăbire / creștere) → macro |
 | 2 | `/calculator-deficit-caloric/` | Cât de mare să fie deficitul ca să slăbesc sănătos? | deficit cu ritm ales (0,25–1 kg/săpt), plafon 25%, praguri, explicația deficitului |
 | 3 | `/calculator-necesar-caloric/` | Care e necesarul meu zilnic de menținere? | necesar pe niveluri de activitate, comparație între cele trei formule |

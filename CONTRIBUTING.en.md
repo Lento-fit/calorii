@@ -38,4 +38,4 @@ By contributing you agree that your code is published under MIT and your data un
 
 ## Questions
 
-GitHub Discussions or hello@lento.fit.
+GitHub Discussions or <hello@lento.fit>.

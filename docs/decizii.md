@@ -3,7 +3,7 @@
 Un rând nou pentru fiecare decizie care afectează alt pachet de lucru sau schimbă o regulă. Fără motiv nu e decizie. Deciziile „moarte” rămân în log ca memo.
 
 | ID | Data | Status | Decizie | Motiv | Cine |
-|---|---|---|---|---|---|
+| --- | --- | --- | --- | --- | --- |
 | D001 | 2026-09-19 | activă | Numele proiectului și al pachetelor este `calorii` (repo `Lento-fit/calorii`, npm `calorii` și `calorii-mcp`, PyPI `calorii`). | Nume scurt, identic pe toate platformele, liber la data deciziei; rădăcina cuvântului e recognoscibilă în toate limbile vizate. Un 404 pe registru nu rezervă numele; se verifică la publicare, fără pachete goale. | mentenanți |
 | D002 | 2026-09-19 | activă | Site-ul public se găzduiește pe Vercel (domeniu `calculator.lento.fit`), nu pe GitHub Pages. GitHub rămâne pentru cod, date și documentație. | Termenii GitHub Pages exclud site-urile orientate comercial; Vercel oferă preview per PR cu `noindex` și configurare de domeniu fără fișiere în repo. | mentenanți |
 | D003 | 2026-09-19 | activă | Widget-ul pune o linie de atribuire vizibilă cu `rel="nofollow"` implicit; gazda poate alege altă calificare. Nu se cere niciun tip de link ca condiție de folosire. | Politicile Google privind link-urile impuse și link-urile din widget-uri; utilitatea widget-ului e trimiterea de utilizatori, nu transferul de autoritate. | mentenanți |

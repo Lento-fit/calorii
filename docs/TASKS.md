@@ -3,7 +3,7 @@
 Proiectul e construit de mai mulți contribuitori (oameni și agenți) în paralel. Fiecare pachet de lucru (WP) scrie doar în directoarele lui; ce e comun (contractele) se schimbă doar prin PR etichetat `contract-change`. Fiecare rând de mai jos devine un issue pe GitHub (șablonul „Sarcină”), cu criteriile de acceptare copiate. Board: GitHub Projects, coloane Backlog · Ready · În lucru · În review · Blocat · Gata.
 
 | WP | Livrabil | Directoare | Depinde de | Stare |
-|---|---|---|---|---|
+| --- | --- | --- | --- | --- |
 | WP0 Guvernanță și CI | schelet, licențe, `AGENTS.md`, `CONTRIBUTING.md`, `CODEOWNERS`, șabloane, CI, registrul de limbi, contracte inițiale | rădăcină, `.github/`, `config/`, `docs/` | — | gata (acest commit) |
 | WP1 Cercetare pagini | confirmarea listei de pagini și a întrebărilor frecvente pentru română | `docs/PAGINI-ro.md` | — | ready |
 | WP2 Motor `calorii` | pachet TypeScript care trece toți vectorii; README API; publicare npm | `packages/calorii/` | — | ready |

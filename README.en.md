@@ -13,7 +13,7 @@ An open, verifiable, multilingual resource about calories and nutrition: somethi
 ## What it will contain
 
 | Component | What it does | Where |
-|---|---|---|
+| --- | --- | --- |
 | `calorii` (npm) | calculation engine, pure functions, zero dependencies | [`packages/calorii/`](packages/calorii/) |
 | `alimente-ro` | open dataset (CC BY 4.0), values per 100 g with provenance | [`data/`](data/) |
 | site | interactive calculators, explanations, sources; Romanian first, then other languages | [`site/`](site/) |
@@ -40,7 +40,7 @@ python3 scripts/validate-data.py
 
 ## Who we are
 
-Created and maintained by the [Lento.fit](https://lento.fit/) team (Netwise Media SRL, Romania). Lento.fit is a nutrition assistant for iPhone and Android. This project is independent of the app: everything here works without it. Contact: hello@lento.fit.
+Created and maintained by the [Lento.fit](https://lento.fit/) team (Netwise Media SRL, Romania). Lento.fit is a nutrition assistant for iPhone and Android. This project is independent of the app: everything here works without it. Contact: <hello@lento.fit>.
 
 ## Licences
 
