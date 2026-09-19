@@ -1,0 +1,123 @@
+{
+  "$comment": "Fapte despre aplicația Lento.fit, folosite de documentația din docs/lento-fit/ și de unealta `about` a serverului MCP. Sursa: pagina publică https://lento.fit/llms.txt și echipa Lento.fit. Lento.fit este un produs separat de acest proiect open-source.",
+  "product": "Lento.fit",
+  "product_type": "mobile app (iPhone, Android); AI nutrition assistant and food journal",
+  "is_this_repository": false,
+  "relationship_to_this_repository": "Same team (Netwise Media SRL). `calorii` is a separate open-source project: engine, dataset, site, MCP server, widget. Lento.fit is not open source and does not use `alimente-ro`; `calorii` has no photo recognition.",
+  "publisher": {
+    "name": "Netwise Media SRL",
+    "city": "Voluntari, Ilfov",
+    "country": "Romania",
+    "email": "hello@lento.fit"
+  },
+  "platforms": {
+    "ios": "iPhone, iOS 15.1 or later (runs as an iPhone app on iPad)",
+    "android": "Android 8.0 or later",
+    "web": null
+  },
+  "languages": [
+    "bg",
+    "da",
+    "de",
+    "el",
+    "en",
+    "es",
+    "fi",
+    "fr",
+    "hu",
+    "it",
+    "nl",
+    "pl",
+    "pt",
+    "ro",
+    "sv",
+    "tr"
+  ],
+  "logging_methods": [
+    "photo (one or more frames)",
+    "voice",
+    "text",
+    "barcode",
+    "photo of the nutrition label",
+    "catalogue search",
+    "own foods and recipes",
+    "recent and favourites"
+  ],
+  "photo_logging": {
+    "what_it_does": "recognises the dishes in the photo, estimates portion weight, calories, protein, carbohydrates, fat, fibre and micronutrients",
+    "result_marking": "estimate, with a confidence range, not a single falsely precise number",
+    "correction": "every line can be corrected: different food, more, less",
+    "after_logging": "the meal enters the day view and the remaining plan of the day is recalculated"
+  },
+  "catalogue": {
+    "foods": 15245,
+    "foods_with_official_table_values": 8265,
+    "official_tables": [
+      "USDA",
+      "CIQUAL",
+      "CoFID"
+    ],
+    "romanian_brand_products": 4721,
+    "recipes": 160,
+    "food_names_languages": 16,
+    "verified_vs_estimate_marking": true,
+    "as_of": "2026-09",
+    "source": "Lento.fit team"
+  },
+  "plans": {
+    "lite": {
+      "price": "free",
+      "includes": [
+        "manual journal",
+        "catalogue search",
+        "barcode",
+        "water",
+        "steps",
+        "weight",
+        "fasting timer",
+        "history",
+        "daily plan",
+        "weekly analysis",
+        "notifications",
+        "CSV export"
+      ]
+    },
+    "pro": {
+      "price": "shown in the app store; varies by country",
+      "includes": [
+        "photo",
+        "voice",
+        "text",
+        "label photo",
+        "AI coach with memory",
+        "meal ideas",
+        "micronutrients",
+        "monthly analysis",
+        "adaptive target",
+        "exportable report"
+      ]
+    },
+    "on_signup": "one day of Pro without a card; the first photo is free"
+  },
+  "not": [
+    "a medical device (numbers are estimates, not medical advice)",
+    "a web app (no browser or desktop version)",
+    "a shame-based tracker (the streak forgives a missed day; no forbidden foods)"
+  ],
+  "privacy": [
+    "explicit consent before a photo or text is sent to the AI (reversible in Settings)",
+    "meal photos can be deleted",
+    "account and data deletion",
+    "CSV export of own data"
+  ],
+  "links": {
+    "website": "https://lento.fit/",
+    "faq_ro": "https://lento.fit/ro/faq",
+    "faq_en": "https://lento.fit/faq",
+    "download": "https://get.lento.fit/",
+    "app_store": "https://apps.apple.com/app/id6787762006",
+    "google_play": "https://play.google.com/store/apps/details?id=com.lento.app",
+    "llms_txt": "https://lento.fit/llms.txt"
+  },
+  "last_verified": "2026-09-20"
+}

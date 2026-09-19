@@ -6,13 +6,13 @@ Proiectul e construit de mai mulți contribuitori (oameni și agenți) în paral
 | --- | --- | --- | --- | --- |
 | WP0 Guvernanță și CI | schelet, licențe, `AGENTS.md`, `CONTRIBUTING.md`, `CODEOWNERS`, șabloane, CI, registrul de limbi, contracte inițiale | rădăcină, `.github/`, `config/`, `docs/` | — | gata (acest commit) |
 | WP1 Cercetare pagini | confirmarea listei de pagini și a întrebărilor frecvente pentru română | `docs/PAGINI-ro.md` | — | ready |
-| WP2 Motor `calorii` | pachet TypeScript care trece toți vectorii; README API; publicare npm | `packages/calorii/` | — | ready |
-| WP3 Date `alimente-ro` | primele înregistrări cu sursă și licență; export CSV la build; validator extins la nevoie | `data/`, `scripts/` | — | ready |
+| WP2 Motor `calorii` | pachet TypeScript care trece toți vectorii; README API; publicare npm | `packages/calorii/` | — | implementat, în review (PR); publicarea npm rămâne pentru primul tag |
+| WP3 Date `alimente-ro` | primele înregistrări cu sursă și licență; export CSV la build; validator extins la nevoie | `data/`, `scripts/` | — | primele 38 de alimente (USDA) în review (PR); deschis pentru preparate românești, produse de brand și alte surse |
 | WP4 Site shell și i18n | Astro, layout, componente-calculator, registrul de limbi în build, rute, hreflang, sitemap, `llms.txt`, deploy Vercel | `site/` (fără `src/content/`) | WP2 | ready |
 | WP5 Conținut română | cele 13 pagini din `docs/PAGINI-ro.md`, `i18n/ro.json`, surse verificate | `site/src/content/ro/`, `site/src/i18n/ro.json` | WP1, WP4 | blocat de WP4 |
-| WP6 Server MCP | `calorii-mcp` local, `server.json`, snippet-uri testate, `docs/mcp-compat.md`; ulterior nivelul HTTP | `packages/calorii-mcp/` | WP2, WP3 | blocat de WP2 |
-| WP7 Widget | `widget.js`, `/embed/`, atribuire `nofollow` implicit | `packages/widget/`, `site/src/pages/embed/` | WP2, WP4 | blocat de WP2 |
-| WP8 Python | port cu aceiași vectori; publicare PyPI prin Trusted Publishing | `packages/calorii-py/` | WP2 | blocat de WP2 |
+| WP6 Server MCP | `calorii-mcp` local, `server.json`, snippet-uri testate, `docs/mcp-compat.md`; ulterior nivelul HTTP | `packages/calorii-mcp/` | WP2, WP3 | ready după merge WP2 |
+| WP7 Widget | `widget.js`, `/embed/`, atribuire `nofollow` implicit | `packages/widget/`, `site/src/pages/embed/` | WP2, WP4 | blocat de WP4 |
+| WP8 Python | port cu aceiași vectori; publicare PyPI prin Trusted Publishing | `packages/calorii-py/` | WP2 | ready după merge WP2 |
 | WP9 Limbi | un WP per limbă, după checklist-ul din `docs/SPEC.md` §2 | `site/src/content/<locale>/`, `site/src/i18n/<locale>.json`, `data/translations/<locale>.json` | WP4, WP5 | după română |
 
 ## Criterii de acceptare (rezumat; detaliile în `docs/SPEC.md` și în contracte)
