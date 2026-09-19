@@ -1,11 +1,10 @@
 # Fiecare linie: model de fișiere → proprietari (review obligatoriu când protecția ramurii cere review de la CODEOWNERS).
-# TODO mentenanți: înlocuiți @OWNER cu numele de utilizator GitHub al mentenantului principal.
 
-/data/                       @OWNER
-/docs/decizii.md             @OWNER
-/config/locales.json         @OWNER
-/site/src/i18n/              @OWNER
-/LICENSE                     @OWNER
-/data/LICENSE                @OWNER
-/packages/calorii/test/vectors.json   @OWNER
-/.github/                    @OWNER
+/data/                       @netwisemedia
+/docs/decizii.md             @netwisemedia
+/config/locales.json         @netwisemedia
+/site/src/i18n/              @netwisemedia
+/LICENSE                     @netwisemedia
+/data/LICENSE                @netwisemedia
+/packages/calorii/test/vectors.json   @netwisemedia
+/.github/                    @netwisemedia
