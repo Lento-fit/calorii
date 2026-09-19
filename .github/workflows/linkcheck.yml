@@ -22,7 +22,7 @@ jobs:
           fail: false
       - name: Deschide issue dacă sunt linkuri rupte
         if: steps.lychee.outputs.exit_code != 0
-        uses: peter-evans/create-issue-from-file@v5
+        uses: peter-evans/create-issue-from-file@v6
         with:
           title: "Linkuri rupte (verificare săptămânală)"
           content-filepath: ./lychee/out.md
