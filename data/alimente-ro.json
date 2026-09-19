@@ -29,7 +29,7 @@
         },
         {
           "nume": "1 ou mare",
-          "grame": 243.0
+          "grame": 50.0
         },
         {
           "nume": "1 ou foarte mare",
@@ -253,7 +253,7 @@
         },
         {
           "nume": "1 banană mare",
-          "grame": 152.0
+          "grame": 136.0
         }
       ],
       "stare": "verificat",
@@ -1103,7 +1103,7 @@
       "portii": [
         {
           "nume": "1 ceapă medie",
-          "grame": 14.0
+          "grame": 110.0
         },
         {
           "nume": "1 cană, tocată",
