@@ -12,6 +12,6 @@ Surse acceptate pentru `alimente-ro`, licențele lor și atribuirea cerută. O �
 
 Nu se acceptă: baze de date ale altor aplicații, site-uri de rețete, valori „din memorie”, valori fără dată de preluare.
 
-Licența compilației: CC BY 4.0. Atribuire pentru reutilizatori: „Date: Lento.fit — github.com/Lento-fit/calorii”, plus atribuirile surselor de mai sus atunci când redistribuie înregistrări provenite din ele.
+Licența compilației: CC BY 4.0. Atribuire pentru reutilizatori: „Date: proiectul calorii (github.com/Lento-fit/calorii), echipa Lento.fit”, plus atribuirile surselor de mai sus atunci când redistribuie înregistrări provenite din ele.
 
 Fiecare versiune a setului notează în `CHANGELOG.md` sursele folosite și versiunile lor (`sursa.versiune_sursa`).

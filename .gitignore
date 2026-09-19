@@ -26,3 +26,7 @@ research/private/*
 Thumbs.db
 .idea/
 *.log
+
+# copii duplicate create de macOS (Finder / iCloud): „nume 2.ext”
+* 2
+* 2.*

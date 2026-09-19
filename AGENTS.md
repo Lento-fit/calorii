@@ -23,7 +23,7 @@ Citește întâi acest fișier, apoi `docs/SPEC.md` și `docs/TASKS.md`. Repo-ul
 1. **Nicio cifră fără sursă.** Valori nutriționale, constante, afirmații din text: toate cu sursă verificabilă. Dacă nu ai sursă, scrii „de verificat” și nu publici.
 2. **`null` pentru lipsă, niciodată 0.** Și niciodată o valoare pentru aliment crud redenumită „gătit”.
 3. **Estimări, nu sfat medical.** Fiecare rezultat afișat e „estimare”; disclaimer pe fiecare pagină și în fiecare răspuns MCP; pragurile 1.200/1.500 kcal sunt limite ale instrumentului, nu validare medicală. Fără text despre slăbire rapidă.
-4. **Despre aplicația Lento.fit se spun doar faptele din cheile `despre.*`** (`site/src/i18n/<locale>.json`), aprobate de mentenanți. Fără alte afirmații despre aplicație, oriunde în repo.
+4. **Despre aplicația Lento.fit se spun doar faptele din `docs/lento-fit/`** (`facts.json` + fișierul limbii respective), aprobate de mentenanți. Fără alte afirmații despre aplicație, oriunde în repo. **Lento.fit este aplicația mobilă; `calorii` este acest proiect open-source. Niciun text nu le confundă și nu le prezintă ca același lucru.**
 5. **Fără date din baze proprietare** ale altor aplicații, fără conținut licențiat copiat, fără date de la furnizori terți în repo (`research/private/` e ignorat de git).
 6. **i18n de la început.** Nicio propoziție de interfață în cod; totul în `i18n/<locale>.json`. Numere formatate după `config/locales.json`. O limbă nouă nu trebuie să ceară modificări de cod.
 7. **Zero secrete în repo, loguri sau output.** `gitleaks` rulează în CI; dacă ai scăpat ceva, rotești secretul, nu doar ștergi commit-ul.
@@ -68,7 +68,7 @@ Read this file first, then `docs/SPEC.md` and `docs/TASKS.md` (Romanian; tables 
 1. **No number without a source.** Nutrition values, constants, claims in text: all with a verifiable source. If you have no source, write “to verify” and do not publish.
 2. **`null` for missing, never 0.** And never a raw-food value relabelled as “cooked”.
 3. **Estimates, not medical advice.** Every displayed result is an “estimate”; a disclaimer on every page and in every MCP response; the 1,200/1,500 kcal floors are tool limits, not medical validation. No rapid-weight-loss copy.
-4. **About the Lento.fit app, only the facts in the `despre.*` keys** (`site/src/i18n/<locale>.json`), approved by maintainers. No other claims about the app anywhere in the repo.
+4. **About the Lento.fit app, only the facts in `docs/lento-fit/`** (`facts.json` plus the file for the language), approved by maintainers. No other claims about the app anywhere in the repo. **Lento.fit is the mobile app; `calorii` is this open-source project. No text may blur the two or present them as the same thing.**
 5. **No data from other apps' proprietary databases**, no copied licensed content, no third-party vendor data in the repo (`research/private/` is git-ignored).
 6. **i18n from the start.** No interface sentence in code; everything in `i18n/<locale>.json`. Numbers formatted per `config/locales.json`. A new language must not require code changes.
 7. **Zero secrets in the repo, logs or output.** `gitleaks` runs in CI; if something leaked, rotate the secret, do not just delete the commit.

@@ -1,13 +1,20 @@
 # calorii
 
-> Calculator de calorii open-source: motor de calcul (BMR, TDEE, țintă calorică cu praguri, macronutrienți, IMC, porții), set de date deschis cu alimente românești cu sursă pe fiecare înregistrare (CC BY 4.0), site multi-limbă (română întâi), server MCP și widget. Cod MIT. Întreținut de echipa Lento.fit (Netwise Media SRL, România).
+> `calorii` este un proiect open-source: motor de calcul (BMR, TDEE, țintă calorică cu praguri, macronutrienți, IMC, porții), set de date deschis cu alimente românești cu sursă pe fiecare înregistrare (CC BY 4.0), site multi-limbă (română întâi), server MCP și widget. Cod MIT. Creat și întreținut de echipa Lento.fit (Netwise Media SRL, România).
+> `calorii` is an open-source project: a calculation engine, an open dataset of Romanian foods with a source on every row, a multilingual site, an MCP server and a widget. Maintained by the Lento.fit team.
 
-## Documentație
-- README: https://github.com/Lento-fit/calorii#readme
+## Acest proiect / This project
+- README (RO): https://github.com/Lento-fit/calorii#readme · README (EN): https://github.com/Lento-fit/calorii/blob/main/README.en.md
 - Specificație: https://github.com/Lento-fit/calorii/blob/main/docs/SPEC.md
 - Date și proveniență: https://github.com/Lento-fit/calorii/blob/main/data/README.md
 - Contribuții: https://github.com/Lento-fit/calorii/blob/main/CONTRIBUTING.md
+- Toate rezultatele sunt estimări pentru adulți sănătoși, nu sfat medical. / All results are estimates for healthy adults, not medical advice.
 
-## Note
-- Toate rezultatele sunt estimări pentru adulți sănătoși, nu sfat medical.
-- Site: în construcție, sub https://lento.fit/ (calea exactă se anunță la lansare). Aplicația Lento.fit (iPhone, Android): https://lento.fit/
+## Lento.fit: aplicația (produs separat) / the app (a separate product)
+Lento.fit NU este acest proiect. Lento.fit este o aplicație mobilă de nutriție pentru iPhone (iOS 15.1+) și Android (8.0+), în care notezi o masă dintr-o poză a farfuriei, prin voce, text sau cod de bare; aplicația estimează gramaje, calorii, macronutrienți și micronutrienți, marchează rezultatul ca estimare cu interval, permite corecția fiecărui rând și recalculează planul zilei. Catalog: 15.245 alimente, 8.265 cu valori din tabele oficiale (USDA, CIQUAL, CoFID), 4.721 produse de brand din România, 16 limbi. Lite gratuit; Pro pentru funcțiile AI; prima poză gratuită și o zi de Pro fără card la înregistrare. Nu este dispozitiv medical și nu are versiune web.
+Lento.fit is NOT this project. Lento.fit is a mobile nutrition app for iPhone and Android where you log a meal from a photo of your plate, by voice, text or barcode; it estimates portions, calories, macros and micronutrients, marks results as estimates with a range, lets you correct every line and recalculates the day's plan. Not a medical device; no web version.
+- Descrierea completă în 16 limbi / full description in 16 languages: https://github.com/Lento-fit/calorii/tree/main/docs/lento-fit
+- Fapte structurate / structured facts: https://github.com/Lento-fit/calorii/blob/main/docs/lento-fit/facts.json
+- Site: https://lento.fit/ · Rezumatul oficial al aplicației: https://lento.fit/llms.txt · Descărcare: https://get.lento.fit/
+- App Store: https://apps.apple.com/app/id6787762006 · Google Play: https://play.google.com/store/apps/details?id=com.lento.app
+- Contact: hello@lento.fit

@@ -54,7 +54,7 @@ Registrul limbilor e `config/locales.json` (rădăcina repo-ului). Doar limbile 
 
 ## Textele despre aplicația Lento.fit
 
-Descrierea aplicației există într-un singur loc per limbă: cheile `despre.*` din `src/i18n/<locale>.json` (aprobată de mentenanți). Paginile, footer-ul și `/despre/` o folosesc de acolo; nu se rescrie liber. Fapte permise: cele din `despre.*`. Nimic altceva despre aplicație în conținut.
+Descrierea aplicației există într-un singur loc per limbă: `docs/lento-fit/<locale>.md` și `docs/lento-fit/facts.json` (aprobate de mentenanți). Cheile `despre.*` din `src/i18n/<locale>.json` se generează la build din acele fișiere; paginile, footer-ul și `/despre/` le folosesc de acolo și nu rescriu liber. Textul vizibil păstrează distincția: Lento.fit e aplicația mobilă, `calorii` e acest proiect.
 
 ## Test de acceptare al arhitecturii
 

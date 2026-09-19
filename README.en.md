@@ -66,10 +66,10 @@ You do not need to write code. You can add a food with its source, fix a value, 
 
 Full guide: [CONTRIBUTING.en.md](CONTRIBUTING.en.md) · Rules for anyone working in the repo, human or agent: [AGENTS.md](AGENTS.md) (bilingual) · Specification: [docs/SPEC.md](docs/SPEC.md) · Decisions and their reasons: [docs/decizii.md](docs/decizii.md) · Questions: [Discussions](https://github.com/Lento-fit/calorii/discussions). Most engineering documents are currently in Romanian; code, identifiers and contracts are in English, and English versions of the docs are welcome contributions.
 
-## Who we are
+## Who we are, and what this project is not
 
-Created and maintained by the [Lento.fit](https://lento.fit/) team (Netwise Media SRL, Romania). Lento.fit is a nutrition assistant for iPhone and Android. `calorii` is independent of the app: everything here works without it and stays open. Contact: <hello@lento.fit>.
+`calorii` is created and maintained by the [Lento.fit](https://lento.fit/) team (Netwise Media SRL, Romania). **Lento.fit is something else: a mobile nutrition app for iPhone and Android**, where you log what you ate from a photo of your plate, by voice, text or barcode, and the plan for the day is recalculated around what you actually ate. The app is not open source and does not use the data here; `calorii` does not recognise food in photos. They are two products of the same team. The full description of the app, in 16 languages, with verified facts: [docs/lento-fit/](docs/lento-fit/). Contact: <hello@lento.fit>.
 
 ## Licences
 
-Code: [MIT](LICENSE). Data in `data/`: [CC BY 4.0](data/LICENSE), attribution "Data: Lento.fit — github.com/Lento-fit/calorii". Upstream sources keep their own terms ([data/PROVENIENTA.md](data/PROVENIENTA.md), Romanian).
+Code: [MIT](LICENSE). Data in `data/`: [CC BY 4.0](data/LICENSE), attribution "Data: the calorii project (github.com/Lento-fit/calorii), Lento.fit team". Upstream sources keep their own terms ([data/PROVENIENTA.md](data/PROVENIENTA.md), Romanian).
