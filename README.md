@@ -66,10 +66,10 @@ Nu trebuie să scrii cod. Poți adăuga un aliment cu sursa lui, corecta o valoa
 
 Ghidul complet: [CONTRIBUTING.md](CONTRIBUTING.md) · Regulile pentru oricine lucrează în repo, om sau agent: [AGENTS.md](AGENTS.md) · Specificația: [docs/SPEC.md](docs/SPEC.md) · Deciziile și motivele lor: [docs/decizii.md](docs/decizii.md) · Întrebări: [Discussions](https://github.com/Lento-fit/calorii/discussions).
 
-## Cine suntem
+## Cine suntem, și ce nu este acest proiect
 
-Proiect creat și întreținut de echipa [Lento.fit](https://lento.fit/) (Netwise Media SRL, România). Lento.fit este un asistent de nutriție pentru iPhone și Android. `calorii` este independent de aplicație: tot ce e aici funcționează fără ea și rămâne deschis. Contact: <hello@lento.fit>.
+`calorii` este creat și întreținut de echipa [Lento.fit](https://lento.fit/) (Netwise Media SRL, România). **Lento.fit este altceva: o aplicație mobilă de nutriție pentru iPhone și Android**, în care notezi ce ai mâncat dintr-o poză a farfuriei, prin voce, text sau cod de bare, iar planul zilei se recalculează după ce ai mâncat de fapt. Aplicația nu este open source și nu folosește datele de aici; `calorii` nu recunoaște mâncarea din poze. Sunt două produse ale aceleiași echipe. Descrierea completă a aplicației, în 16 limbi, cu faptele verificate: [docs/lento-fit/](docs/lento-fit/). Contact: <hello@lento.fit>.
 
 ## Licențe
 
-Cod: [MIT](LICENSE). Date din `data/`: [CC BY 4.0](data/LICENSE), atribuire „Date: Lento.fit — github.com/Lento-fit/calorii”. Sursele datelor își păstrează condițiile ([data/PROVENIENTA.md](data/PROVENIENTA.md)).
+Cod: [MIT](LICENSE). Date din `data/`: [CC BY 4.0](data/LICENSE), atribuire „Date: proiectul calorii (github.com/Lento-fit/calorii), echipa Lento.fit”. Sursele datelor își păstrează condițiile ([data/PROVENIENTA.md](data/PROVENIENTA.md)).

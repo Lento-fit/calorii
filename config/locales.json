@@ -1,27 +1,26 @@
 {
-  "$comment": "Registrul limbilor. Doar `activeLocales` intră în build-ul de producție, în sitemap și în hreflang. Limbile viitoare se adaugă aici întâi ca `planned`, apoi `in_review`, apoi `published`.",
+  "$comment": "Registrul limbilor. Doar `activeLocales` intră în build-ul de producție, în sitemap și în hreflang. Limbile viitoare se adaugă aici întâi ca `planned`, apoi `in_review`, apoi `published`. Lista celor 16 limbi (ro + candidateLocales) este cea publicată pe lento.fit (hreflang), verificată la 2026-09-20.",
   "defaultLocale": "ro",
   "activeLocales": [
     "ro"
   ],
   "plannedLocales": [],
   "candidateLocales": [
-    "en",
-    "fr",
+    "bg",
+    "da",
     "de",
+    "el",
+    "en",
     "es",
+    "fi",
+    "fr",
+    "hu",
     "it",
-    "pt",
     "nl",
     "pl",
-    "hu",
-    "cs",
+    "pt",
     "sv",
-    "da",
-    "fi",
-    "tr",
-    "el",
-    "bg"
+    "tr"
   ],
   "locales": {
     "ro": {
