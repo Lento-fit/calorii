@@ -10,4 +10,4 @@
 
 ## Note
 - Toate rezultatele sunt estimări pentru adulți sănătoși, nu sfat medical.
-- Site: în construcție, adresa se anunță la lansare. Aplicația Lento.fit (iPhone, Android): https://lento.fit/
+- Site: în construcție, sub https://lento.fit/ (calea exactă se anunță la lansare). Aplicația Lento.fit (iPhone, Android): https://lento.fit/
