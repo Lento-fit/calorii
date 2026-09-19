@@ -1,0 +1,25 @@
+name: Valoare greșită
+description: Semnalează o valoare nutrițională sau o sursă greșită în alimente-ro.
+title: "[corecție] "
+labels: ["date", "valoare-gresita"]
+body:
+  - type: input
+    id: id
+    attributes:
+      label: id-ul înregistrării
+      placeholder: "orez-alb-fiert"
+    validations:
+      required: true
+  - type: textarea
+    id: problema
+    attributes:
+      label: Ce e greșit și care ar fi valoarea corectă
+    validations:
+      required: true
+  - type: textarea
+    id: sursa
+    attributes:
+      label: Sursa pentru valoarea corectă (obligatorie)
+      description: Fără sursă verificabilă nu putem modifica o valoare.
+    validations:
+      required: true

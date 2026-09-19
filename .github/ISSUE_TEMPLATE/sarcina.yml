@@ -1,0 +1,33 @@
+name: Sarcină (pachet de lucru)
+description: O sarcină dintr-un pachet de lucru din docs/TASKS.md.
+title: "WPx: "
+labels: ["sarcina"]
+body:
+  - type: dropdown
+    id: wp
+    attributes:
+      label: Pachetul de lucru
+      options: ["WP0 Guvernanță și CI", "WP1 Cercetare pagini", "WP2 Motor", "WP3 Date", "WP4 Site shell și i18n", "WP5 Conținut română", "WP6 Server MCP", "WP7 Widget", "WP8 Python", "WP9 Limbi"]
+    validations:
+      required: true
+  - type: textarea
+    id: scop
+    attributes:
+      label: Scop și livrabil
+    validations:
+      required: true
+  - type: textarea
+    id: acceptare
+    attributes:
+      label: Criterii de acceptare
+      description: Copiate sau derivate din docs/TASKS.md și docs/SPEC.md.
+    validations:
+      required: true
+  - type: input
+    id: fisiere
+    attributes:
+      label: Directoare și fișiere atinse
+  - type: input
+    id: dependente
+    attributes:
+      label: Depinde de

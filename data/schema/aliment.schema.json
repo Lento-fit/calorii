@@ -1,0 +1,241 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/Lento-fit/calorii/data/schema/aliment.schema.json",
+  "title": "Aliment (o înregistrare din alimente-ro)",
+  "type": "object",
+  "required": [
+    "id",
+    "nume",
+    "categorie",
+    "stare_preparare",
+    "la_100g",
+    "portii",
+    "stare",
+    "sursa"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$",
+      "description": "Identificator stabil, ASCII, kebab-case. Nu se schimbă niciodată; conține starea de preparare când contează (ex. orez-alb-fiert)."
+    },
+    "nume": {
+      "type": "object",
+      "required": [
+        "ro",
+        "en"
+      ],
+      "properties": {
+        "ro": {
+          "type": "string",
+          "minLength": 2
+        },
+        "en": {
+          "type": "string",
+          "minLength": 2
+        }
+      },
+      "additionalProperties": {
+        "type": "string"
+      },
+      "description": "Nume în română și engleză aici; celelalte limbi în data/translations/<locale>.json."
+    },
+    "categorie": {
+      "type": "string",
+      "enum": [
+        "cereale-si-derivate",
+        "paine-si-produse-de-panificatie",
+        "lactate",
+        "oua",
+        "carne",
+        "peste-si-fructe-de-mare",
+        "legume",
+        "fructe",
+        "leguminoase",
+        "nuci-si-seminte",
+        "grasimi-si-uleiuri",
+        "dulciuri",
+        "bauturi",
+        "preparate-traditionale",
+        "fast-food",
+        "produse-de-brand",
+        "altele"
+      ]
+    },
+    "stare_preparare": {
+      "type": "string",
+      "enum": [
+        "crud",
+        "gatit",
+        "asa-cum-se-consuma",
+        "nu-se-aplica"
+      ]
+    },
+    "la_100g": {
+      "type": "object",
+      "required": [
+        "kcal",
+        "proteine_g",
+        "carbohidrati_g",
+        "grasimi_g",
+        "fibre_g"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "kcal": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "minimum": 0
+        },
+        "proteine_g": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "minimum": 0
+        },
+        "carbohidrati_g": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "minimum": 0
+        },
+        "grasimi_g": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "minimum": 0
+        },
+        "fibre_g": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "minimum": 0
+        },
+        "zaharuri_g": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "minimum": 0
+        },
+        "grasimi_saturate_g": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "minimum": 0
+        },
+        "sodiu_mg": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "minimum": 0
+        }
+      },
+      "description": "Valori la 100 g așa cum se consumă. null = lipsă; 0 e o valoare măsurată, nu o lipsă."
+    },
+    "portii": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "nume",
+          "grame"
+        ],
+        "additionalProperties": false,
+        "properties": {
+          "nume": {
+            "type": "string"
+          },
+          "grame": {
+            "type": "number",
+            "exclusiveMinimum": 0
+          }
+        }
+      }
+    },
+    "stare": {
+      "type": "string",
+      "enum": [
+        "verificat",
+        "estimare"
+      ],
+      "description": "verificat = valoare dintr-o sursă oficială sau de pe etichetă; estimare = calcul din rețetă sau valoare derivată."
+    },
+    "sursa": {
+      "type": "object",
+      "required": [
+        "tip",
+        "referinta",
+        "licenta",
+        "preluat_la"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "tip": {
+          "type": "string",
+          "enum": [
+            "usda",
+            "ciqual",
+            "cofid",
+            "eticheta",
+            "reteta"
+          ]
+        },
+        "referinta": {
+          "type": "string",
+          "minLength": 3,
+          "description": "FDC ID / cod CIQUAL / cod CoFID / producător + produs / lista de ingrediente cu gramaje și greutatea finală."
+        },
+        "url": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "licenta": {
+          "type": "string",
+          "enum": [
+            "public-domain",
+            "etalab-2.0",
+            "ogl-3",
+            "fapte-de-pe-eticheta",
+            "calcul-propriu"
+          ]
+        },
+        "versiune_sursa": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "preluat_la": {
+          "type": "string",
+          "pattern": "^\\d{4}-\\d{2}-\\d{2}$"
+        }
+      }
+    },
+    "tara": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "pattern": "^[A-Z]{2}$",
+      "description": "Piața pentru care e specific produsul (ex. RO pentru un produs de brand românesc)."
+    },
+    "note": {
+      "type": [
+        "string",
+        "null"
+      ]
+    }
+  }
+}

@@ -1,0 +1,28 @@
+name: Limbă nouă
+description: Propune sau preia lansarea unei limbi pentru site, MCP și widget.
+title: "[limbă] "
+labels: ["i18n", "limba-noua"]
+body:
+  - type: input
+    id: locale
+    attributes:
+      label: Codul limbii (BCP 47) și piața
+      placeholder: "de — Germania"
+    validations:
+      required: true
+  - type: checkboxes
+    id: checklist
+    attributes:
+      label: Checklist-ul din docs/SPEC.md §2
+      options:
+        - label: Registrul `config/locales.json` actualizat (status `planned` → `in_review` → `published`)
+        - label: "`site/src/i18n/<locale>.json` complet"
+        - label: "`site/src/routes/<locale>.json` cu sluguri locale legate prin pageId"
+        - label: Conținut scris în limba țintă și revizuit de un vorbitor nativ
+        - label: "`data/translations/<locale>.json`"
+        - label: Șiruri MCP și widget
+        - label: hreflang, sitemap și verificări de calitate pe două pagini
+  - type: textarea
+    id: revizor
+    attributes:
+      label: Cine revizuiește ca vorbitor nativ

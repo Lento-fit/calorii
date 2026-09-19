@@ -1,0 +1,11 @@
+# Fiecare linie: model de fișiere → proprietari (review obligatoriu când protecția ramurii cere review de la CODEOWNERS).
+# TODO mentenanți: înlocuiți @OWNER cu numele de utilizator GitHub al mentenantului principal.
+
+/data/                       @OWNER
+/docs/decizii.md             @OWNER
+/config/locales.json         @OWNER
+/site/src/i18n/              @OWNER
+/LICENSE                     @OWNER
+/data/LICENSE                @OWNER
+/packages/calorii/test/vectors.json   @OWNER
+/.github/                    @OWNER

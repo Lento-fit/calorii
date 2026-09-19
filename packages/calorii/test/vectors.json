@@ -1,0 +1,351 @@
+{
+  "$comment": "Contract între motorul TypeScript, portul Python, site, MCP și widget. Valorile sunt NEROTUNJITE; rotunjirea se testează separat, în stratul de afișare. Schimbarea acestui fișier = PR separat, etichetat contract-change.",
+  "tolerance": 0.001,
+  "constants": {
+    "mifflinStJeor": {
+      "weight": 10,
+      "height": 6.25,
+      "age": -5,
+      "male": 5,
+      "female": -161
+    },
+    "harrisBenedictRevised1984": {
+      "male": {
+        "base": 88.362,
+        "weight": 13.397,
+        "height": 4.799,
+        "age": -5.677
+      },
+      "female": {
+        "base": 447.593,
+        "weight": 9.247,
+        "height": 3.098,
+        "age": -4.33
+      }
+    },
+    "katchMcArdle": {
+      "base": 370,
+      "leanMass": 21.6
+    },
+    "activity": {
+      "sedentary": 1.2,
+      "light": 1.375,
+      "moderate": 1.55,
+      "active": 1.725,
+      "very_active": 1.9
+    },
+    "kcalPerKgBodyFat": 7700,
+    "capShareOfTdee": {
+      "lose": 0.25,
+      "gain": 0.15
+    },
+    "safeFloorKcal": {
+      "female": 1200,
+      "male": 1500
+    },
+    "rateTooFastShareOfWeight": 0.01,
+    "kcalPerGram": {
+      "protein": 4,
+      "carbs": 4,
+      "fat": 9
+    },
+    "macroProfiles": {
+      "balanced": {
+        "proteinGPerKg": 1.6,
+        "fatShare": 0.275
+      },
+      "high_protein": {
+        "proteinGPerKg": 2.0,
+        "fatShare": 0.275
+      },
+      "low_carb": {
+        "proteinGPerKg": 1.8,
+        "fatShare": 0.4
+      }
+    },
+    "macroMinimums": {
+      "carbsShare": 0.1,
+      "fatShare": 0.2,
+      "proteinGPerKg": 1.2,
+      "efsaDrvProteinGPerKg": 0.83
+    },
+    "bmiCategories": [
+      {
+        "max": 18.5,
+        "category": "underweight"
+      },
+      {
+        "max": 25,
+        "category": "normal"
+      },
+      {
+        "max": 30,
+        "category": "overweight"
+      },
+      {
+        "max": 35,
+        "category": "obese_1"
+      },
+      {
+        "max": 40,
+        "category": "obese_2"
+      },
+      {
+        "max": null,
+        "category": "obese_3"
+      }
+    ],
+    "healthyBmiRange": [
+      18.5,
+      24.9
+    ],
+    "inputRanges": {
+      "ageYears": [
+        18,
+        100
+      ],
+      "weightKg": [
+        30,
+        300
+      ],
+      "heightCm": [
+        120,
+        250
+      ],
+      "bodyFatPct": [
+        3,
+        70
+      ]
+    }
+  },
+  "cases": [
+    {
+      "id": "V1",
+      "fn": "bmr+tdee",
+      "input": {
+        "sex": "female",
+        "weightKg": 65,
+        "heightCm": 165,
+        "ageYears": 30,
+        "activity": "moderate"
+      },
+      "expected": {
+        "bmrMifflinStJeor": 1370.25,
+        "bmrHarrisBenedict": 1429.918,
+        "tdeeMifflin": 2123.8875
+      }
+    },
+    {
+      "id": "V2",
+      "fn": "bmr+tdee",
+      "input": {
+        "sex": "male",
+        "weightKg": 80,
+        "heightCm": 178,
+        "ageYears": 35,
+        "activity": "moderate"
+      },
+      "expected": {
+        "bmrMifflinStJeor": 1742.5,
+        "bmrHarrisBenedict": 1815.649,
+        "tdeeMifflin": 2700.875
+      }
+    },
+    {
+      "id": "V3",
+      "fn": "bmrKatchMcArdle",
+      "input": {
+        "weightKg": 80,
+        "bodyFatPct": 20
+      },
+      "expected": {
+        "bmr": 1752.4
+      }
+    },
+    {
+      "id": "V4",
+      "fn": "calorieTarget",
+      "input": {
+        "tdee": 2123.8875,
+        "sex": "female",
+        "weightKg": 65,
+        "goal": "lose",
+        "rateKgPerWeek": 0.5
+      },
+      "expected": {
+        "requestedDailyDelta": 550.0,
+        "appliedDailyDelta": 530.971875,
+        "targetKcal": 1592.915625,
+        "appliedRateKgPerWeek": 0.482702,
+        "adjustments": [
+          "capped_25pct"
+        ],
+        "warnings": [],
+        "feasible": true
+      }
+    },
+    {
+      "id": "V5",
+      "fn": "calorieTarget",
+      "input": {
+        "tdee": 1336.8,
+        "sex": "female",
+        "weightKg": 50,
+        "goal": "lose",
+        "rateKgPerWeek": 1.0
+      },
+      "derivation": {
+        "bmrMifflinStJeor": 1114.0,
+        "activity": "sedentary"
+      },
+      "expected": {
+        "requestedDailyDelta": 1100.0,
+        "appliedDailyDelta": 136.8,
+        "targetKcal": 1200,
+        "appliedRateKgPerWeek": 0.124364,
+        "adjustments": [
+          "capped_25pct",
+          "raised_to_floor"
+        ],
+        "warnings": [
+          "below_safe_floor",
+          "rate_too_fast"
+        ],
+        "feasible": true
+      }
+    },
+    {
+      "id": "V6",
+      "fn": "bmi+healthyWeightRange",
+      "input": {
+        "weightKg": 65,
+        "heightCm": 165
+      },
+      "expected": {
+        "bmi": 23.875115,
+        "category": "normal",
+        "minKg": 50.36625,
+        "maxKg": 67.79025
+      }
+    },
+    {
+      "id": "V7",
+      "fn": "portion",
+      "input": {
+        "per100g": {
+          "kcal": 89,
+          "proteinG": 1.1,
+          "carbsG": 22.8,
+          "fatG": 0.3,
+          "fiberG": 2.6
+        },
+        "grams": 120
+      },
+      "expected": {
+        "kcal": 106.8,
+        "proteinG": 1.32,
+        "carbsG": 27.36,
+        "fatG": 0.36,
+        "fiberG": 3.12
+      }
+    },
+    {
+      "id": "V8",
+      "fn": "macros",
+      "input": {
+        "kcal": 1500,
+        "weightKg": 150,
+        "profile": "high_protein"
+      },
+      "expected": {
+        "proteinG": 234.375,
+        "carbsG": 37.5,
+        "fatG": 45.833333,
+        "proteinGPerKg": 1.5625,
+        "feasible": true,
+        "adjustments": [
+          "protein_reduced_to_fit"
+        ]
+      }
+    },
+    {
+      "id": "V9",
+      "fn": "calorieTarget",
+      "input": {
+        "tdee": 1111.8,
+        "sex": "female",
+        "weightKg": 45,
+        "goal": "lose",
+        "rateKgPerWeek": 1.0
+      },
+      "derivation": {
+        "bmrMifflinStJeor": 926.5,
+        "activity": "sedentary"
+      },
+      "expected": {
+        "requestedDailyDelta": 1100.0,
+        "appliedDailyDelta": null,
+        "targetKcal": null,
+        "appliedRateKgPerWeek": null,
+        "adjustments": [
+          "capped_25pct"
+        ],
+        "warnings": [
+          "below_safe_floor"
+        ],
+        "feasible": false,
+        "reason": "floor_above_tdee"
+      }
+    },
+    {
+      "id": "V10",
+      "fn": "macros",
+      "input": {
+        "kcal": 2000,
+        "weightKg": 70,
+        "profile": "balanced"
+      },
+      "expected": {
+        "proteinG": 112.0,
+        "carbsG": 250.5,
+        "fatG": 61.111111,
+        "proteinGPerKg": 1.6,
+        "feasible": true,
+        "adjustments": []
+      }
+    },
+    {
+      "id": "V11",
+      "fn": "calorieTarget",
+      "input": {
+        "tdee": 2700.875,
+        "sex": "male",
+        "weightKg": 80,
+        "goal": "gain",
+        "rateKgPerWeek": 0.25
+      },
+      "expected": {
+        "requestedDailyDelta": 275.0,
+        "appliedDailyDelta": -275.0,
+        "targetKcal": 2975.875,
+        "appliedRateKgPerWeek": 0.25,
+        "adjustments": [],
+        "warnings": [],
+        "feasible": true
+      }
+    },
+    {
+      "id": "V12",
+      "fn": "bmi",
+      "input": {
+        "weightKg": 68.0625,
+        "heightCm": 165
+      },
+      "$comment": "IMC exact 25,0 → overweight (intervalele sunt continue: 18,5 ≤ x < 25)",
+      "expected": {
+        "bmi": 25.0,
+        "category": "overweight"
+      }
+    }
+  ]
+}

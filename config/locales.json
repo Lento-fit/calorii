@@ -1,0 +1,50 @@
+{
+  "$comment": "Registrul limbilor. Doar `activeLocales` intră în build-ul de producție, în sitemap și în hreflang. Limbile viitoare se adaugă aici întâi ca `planned`, apoi `in_review`, apoi `published`.",
+  "defaultLocale": "ro",
+  "activeLocales": [
+    "ro"
+  ],
+  "plannedLocales": [],
+  "candidateLocales": [
+    "en",
+    "fr",
+    "de",
+    "es",
+    "it",
+    "pt",
+    "nl",
+    "pl",
+    "hu",
+    "cs",
+    "sv",
+    "da",
+    "fi",
+    "tr",
+    "el",
+    "bg"
+  ],
+  "locales": {
+    "ro": {
+      "name": "Română",
+      "status": "published",
+      "market": "RO",
+      "currency": "RON",
+      "units": "metric",
+      "decimal": ",",
+      "thousands": ".",
+      "dir": "ltr",
+      "pathPrefix": ""
+    },
+    "en": {
+      "name": "English",
+      "status": "planned",
+      "market": null,
+      "currency": null,
+      "units": "metric",
+      "decimal": ".",
+      "thousands": ",",
+      "dir": "ltr",
+      "pathPrefix": "/en"
+    }
+  }
+}

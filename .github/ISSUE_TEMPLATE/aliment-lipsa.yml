@@ -1,0 +1,36 @@
+name: Aliment lipsă
+description: Propune un aliment sau un preparat care lipsește din alimente-ro.
+title: "[aliment] "
+labels: ["date", "aliment-lipsa"]
+body:
+  - type: input
+    id: nume
+    attributes:
+      label: Numele alimentului (română) și starea de preparare
+      placeholder: "orez alb, fiert"
+    validations:
+      required: true
+  - type: dropdown
+    id: sursa
+    attributes:
+      label: Tipul sursei
+      options: ["USDA FoodData Central", "CIQUAL (ANSES)", "CoFID (UK)", "Eticheta produsului / pagina producătorului", "Rețetă cu ingrediente și gramaje (estimare)"]
+    validations:
+      required: true
+  - type: textarea
+    id: referinta
+    attributes:
+      label: Referința exactă
+      description: FDC ID, cod CIQUAL/CoFID, link către pagina producătorului sau lista de ingrediente cu gramaje și greutatea finală.
+    validations:
+      required: true
+  - type: textarea
+    id: valori
+    attributes:
+      label: Valori la 100 g (dacă le ai)
+      description: kcal, proteine, carbohidrați, grăsimi, fibre. Scrie „lipsă” unde nu există; nu scrie 0 pentru necunoscut.
+  - type: textarea
+    id: portii
+    attributes:
+      label: Porții uzuale
+      placeholder: "1 porție medie = 200 g"

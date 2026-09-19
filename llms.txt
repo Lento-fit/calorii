@@ -1,0 +1,13 @@
+# calorii
+
+> Calculator de calorii open-source: motor de calcul (BMR, TDEE, țintă calorică cu praguri, macronutrienți, IMC, porții), set de date deschis cu alimente românești cu sursă pe fiecare înregistrare (CC BY 4.0), site multi-limbă (română întâi), server MCP și widget. Cod MIT. Întreținut de echipa Lento.fit (Netwise Media SRL, România).
+
+## Documentație
+- README: https://github.com/Lento-fit/calorii#readme
+- Specificație: https://github.com/Lento-fit/calorii/blob/main/docs/SPEC.md
+- Date și proveniență: https://github.com/Lento-fit/calorii/blob/main/data/README.md
+- Contribuții: https://github.com/Lento-fit/calorii/blob/main/CONTRIBUTING.md
+
+## Note
+- Toate rezultatele sunt estimări pentru adulți sănătoși, nu sfat medical.
+- Site: https://calculator.lento.fit (în construcție). Aplicația Lento.fit (iPhone, Android): https://lento.fit/

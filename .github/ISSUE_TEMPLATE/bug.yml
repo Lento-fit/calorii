@@ -1,0 +1,29 @@
+name: Bug
+description: Ceva nu funcționează în motor, site, MCP sau widget.
+title: "[bug] "
+labels: ["bug"]
+body:
+  - type: dropdown
+    id: componenta
+    attributes:
+      label: Componenta
+      options: ["motor (calorii)", "date (alimente-ro)", "site", "server MCP", "widget", "Python", "CI / repo"]
+    validations:
+      required: true
+  - type: textarea
+    id: pasi
+    attributes:
+      label: Pași de reproducere și rezultatul obținut
+    validations:
+      required: true
+  - type: textarea
+    id: asteptat
+    attributes:
+      label: Rezultatul așteptat (cu sursa, dacă e vorba de o formulă sau o valoare)
+    validations:
+      required: true
+  - type: input
+    id: mediu
+    attributes:
+      label: Mediu
+      placeholder: "browser / client MCP / versiune pachet"

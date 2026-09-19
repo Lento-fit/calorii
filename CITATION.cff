@@ -1,0 +1,18 @@
+cff-version: 1.2.0
+message: "Dacă folosești acest software sau setul de date, citează-l astfel."
+title: "calorii: calculator de calorii open-source și set de date cu alimente românești"
+type: software
+authors:
+  - name: "Lento.fit (Netwise Media SRL)"
+    email: hello@lento.fit
+    country: RO
+repository-code: "https://github.com/Lento-fit/calorii"
+license: MIT
+version: 0.0.0
+date-released: "2026-09-19"
+keywords:
+  - calorii
+  - nutritie
+  - calculator
+  - romania
+  - open-data

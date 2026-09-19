@@ -1,0 +1,28 @@
+# dependențe și build
+node_modules/
+dist/
+.astro/
+.vercel/
+coverage/
+*.tsbuildinfo
+__pycache__/
+*.pyc
+.venv/
+build/
+*.egg-info/
+
+# secrete și local
+.env
+.env.*
+!.env.example
+*.local
+
+# cercetare privată (nu se publică)
+research/private/*
+!research/private/.gitkeep
+
+# sistem / editoare
+.DS_Store
+Thumbs.db
+.idea/
+*.log

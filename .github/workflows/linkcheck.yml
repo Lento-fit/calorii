@@ -1,0 +1,29 @@
+name: Linkuri
+
+on:
+  schedule:
+    - cron: "17 6 * * 1"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  issues: write
+
+jobs:
+  lychee:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Verifică linkurile din Markdown
+        id: lychee
+        uses: lycheeverse/lychee-action@v2
+        with:
+          args: --no-progress --exclude-path node_modules --exclude-path research --accept 200,204,206,429 "**/*.md"
+          fail: false
+      - name: Deschide issue dacă sunt linkuri rupte
+        if: steps.lychee.outputs.exit_code != 0
+        uses: peter-evans/create-issue-from-file@v5
+        with:
+          title: "Linkuri rupte (verificare săptămânală)"
+          content-filepath: ./lychee/out.md
+          labels: documentatie, linkuri

@@ -1,0 +1,62 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  secrete:
+    name: Secrete (gitleaks)
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Instalează gitleaks
+        run: |
+          set -euo pipefail
+          url=$(curl -sSL https://api.github.com/repos/gitleaks/gitleaks/releases/latest | python3 -c 'import json,sys; print(next(a["browser_download_url"] for a in json.load(sys.stdin)["assets"] if a["name"].endswith("linux_x64.tar.gz")))')
+          curl -sSL "$url" | tar -xz gitleaks
+          sudo mv gitleaks /usr/local/bin/gitleaks
+      - name: Scanează istoricul
+        run: gitleaks detect --source . --redact --no-banner --exit-code 1
+
+  documentatie:
+    name: Markdown
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version-file: .nvmrc
+      - run: npx --yes markdownlint-cli2 "**/*.md" "#node_modules"
+
+  contracte:
+    name: JSON, date, vectori
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: python3 scripts/validate-json.py
+      - run: python3 scripts/validate-data.py
+
+  node:
+    name: Pachete Node
+    if: ${{ hashFiles('package-lock.json') != '' }}
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version-file: .nvmrc
+          cache: npm
+      - run: npm ci
+      - run: npm run lint --workspaces --if-present
+      - run: npm test --workspaces --if-present
+      - run: npm run build --workspaces --if-present

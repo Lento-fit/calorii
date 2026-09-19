@@ -1,0 +1,7 @@
+{
+  "$comment": "Colecție de alimente și preparate. Fiecare element respectă data/schema/aliment.schema.json. Vezi data/README.md.",
+  "versiune": "0.0.0",
+  "actualizat": "2026-09-19",
+  "licenta": "CC-BY-4.0",
+  "alimente": []
+}
